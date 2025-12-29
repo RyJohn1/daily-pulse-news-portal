@@ -101,3 +101,37 @@ footer {
   color: #666;
   font-size: 0.8rem;
 }
+#search {
+  padding: 8px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+@media (max-width: 750px) {
+  .main-logo {
+    font-size: 3rem !important;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav a {
+    margin: 8px;
+    font-size: 1rem;
+  }
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 90%;
+  }
+}
+@media (max-width: 480px) {
+  .main-logo {
+    font-size: 2.5rem !important;
+  }
+  .breaking p {
+    font-size: 1rem;
+  }
+}

@@ -1,28 +1,36 @@
 <html>
 <head>
-  <title>Daily Pulse | Admin</title>
+  <title>Daily Pulse | Admin Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-  <h1 class="main-logo">Admin Panel</h1>
+  <h1 class="main-logo">Daily Pulse</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="admin.html">Admin</a>
+  </nav>
 </header>
-<main>
+<section class="breaking">
+  <p>Admin Dashboard (UI Only)</p>
+</section>
+<main class="content-center column">
+  <!-- Add News Form -->
   <div class="card">
-    <h3>Manage Posts</h3>
-    <p>Add / Edit / Delete News Articles</p>
+    <h3>Add News</h3>
+    <input type="text" placeholder="Title"><br>
+    <textarea placeholder="Content"></textarea><br>
+    <button>Add News</button>
   </div>
   <div class="card">
-    <h3>Users</h3>
-    <p>View registered users</p>
-  </div>
-  <div class="card">
-    <h3>Statistics</h3>
-    <p>Daily visitors & page views</p>
+    <h3>Sample News</h3>
+    <p>Example news title</p>
+    <button>Edit</button>
+    <button>Delete</button>
   </div>
 </main>
 <footer>
-  <p>Admin Dashboard – Static UI</p>
+  <p>© 2025 Daily Pulse. All rights reserved.</p>
 </footer>
 </body>
 </html>

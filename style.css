@@ -39,21 +39,16 @@ header {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: transparent;
+  background: none;
   border: none;
   cursor: pointer;
-  z-index: 1000;
-  padding: 10px;
+  z-index: 10;
 }
 
 #toggle-btn i {
   font-size: 28px;
   color: #76b093;
   transition: transform 0.3s ease;
-}
-
-body.light-mode #toggle-btn i {
-  color: #444;
 }
 
 .main-logo {
@@ -116,9 +111,9 @@ nav a:hover {
   100% { transform: translateX(-100%); }
 }
 
-main {
-  display: flex;
-  justify-content: center;
+main, .home-news {
+  display: flex !important;
+  justify-content: center !important;
   gap: 30px;
   padding: 50px 20px;
   flex-wrap: wrap;
@@ -127,12 +122,23 @@ main {
 .card {
   background: rgba(255, 255, 255, 0.07);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   padding: 30px;
   width: 350px;
   color: white;
   transition: all 0.3s ease;
+}
+
+body.light-mode .card h3 {
+  color: #5a8a72;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #76b093;
+  box-shadow: 0 0 20px rgba(118, 176, 147, 0.3);
 }
 
 .card h3 {
@@ -148,9 +154,31 @@ footer {
   font-size: 0.8rem;
 }
 
+#search {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: 1px solid #76b093;
+  background: transparent;
+  color: inherit;
+  margin-left: 15px;
+  outline: none;
+}
+
+body.light-mode #search {
+  background: #fff;
+}
+
 @media (max-width: 750px) {
   .main-logo { font-size: 3rem !important; }
   nav a { margin: 8px; }
   main { flex-direction: column; align-items: center; }
   .card { width: 90%; }
+  #search { margin: 10px 0; width: 80%; }
+}
+
+@media (max-width: 480px) {
+  .main-logo { font-size: 2.5rem !important; }
+}
+body.light-mode #toggle-btn i {
+  color: #444; 
 }

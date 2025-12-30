@@ -1,40 +1,54 @@
 <html>
-<head>
-  <title>Daily Pulse | Article</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header>
-  <h1 class="main-logo">Daily Pulse</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="sports.html">Sports</a>
-    <a href="politics.html">Politics</a>
-    <a href="technology.html">Technology</a>
-    <a href="entertainment.html">Entertainment</a>
-    <a href="login.html">Login</a>
-  </nav>
-</header>
-<section class="breaking">
-  <p>Breaking News: Example article page!</p>
-</section>
-<main class="content-center">
-  <div class="card article-card">
-    <h2>Sample News Headline</h2>
-    <p><em>Published on Dec 2025</em></p>
-    <p>This is an example of a static full news article for layout demonstration.</p>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <title>Daily Pulse | Article</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <button id="toggle-btn" onclick="toggle()">
+        <i id="theme-icon" class="fas fa-sun"></i>
+      </button>
 
-    <div class="card comments">
-      <h3>Comments</h3>
-      <textarea></textarea>
-      <button>Post Comment</button>
-      <p><strong>User1:</strong> Great article!</p>
-      <p><strong>User2:</strong> Very informative.</p>
-    </div>
-  </div>
-</main>
-<footer>
-  <p>© 2025 Daily Pulse. All rights reserved.</p>
-</footer>
-</body>
+      <h1 class="main-logo">Daily Pulse</h1>
+
+      <nav>
+        <a href="index.html"><i class="fas fa-house"></i> Home</a>
+        <a href="sports.html"><i class="fas fa-volleyball"></i> Sports</a>
+        <a href="politics.html"><i class="fas fa-landmark"></i> Politics</a>
+        <a href="technology.html"><i class="fas fa-microchip"></i> Tech</a>
+        <a href="entertainment.html"
+          ><i class="fas fa-film"></i> Entertainment</a
+        >
+        <a href="login.html"><i class="fas fa-user"></i> Login</a>
+      </nav>
+    </header>
+    <section class="breaking">
+      <p>Breaking News: Example article page!</p>
+    </section>
+    <main class="content-center">
+      <div class="card article-card">
+        <h2>Sample News Headline</h2>
+        <p><em>Published on Dec 2025</em></p>
+        <p>
+          This is an example of a static full news article for layout
+          demonstration.
+        </p>
+
+        <div class="card comments">
+          <h3>Comments</h3>
+          <textarea></textarea>
+          <button>Post Comment</button>
+          <p><strong>User1:</strong> Great article!</p>
+          <p><strong>User2:</strong> Very informative.</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>© 2025 Daily Pulse. All rights reserved.</p>
+    </footer>
+  </body>
 </html>

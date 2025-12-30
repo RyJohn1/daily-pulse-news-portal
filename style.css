@@ -4,6 +4,26 @@ body {
   background-color: #121212;
   color: #e0e0e0;
   overflow-x: hidden;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+body.light-mode {
+  background-color: #f4f4f4;
+  color: #121212;
+}
+
+body.light-mode header {
+  background: #ffffff;
+}
+
+body.light-mode .card {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #121212;
+}
+
+body.light-mode nav a {
+  color: #444;
 }
 
 header {
@@ -11,6 +31,29 @@ header {
   padding: 40px 15px;
   text-align: center;
   border-bottom: 2px solid #76b093;
+  transition: background 0.5s;
+  position: relative;
+}
+
+#toggle-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 10px;
+}
+
+#toggle-btn i {
+  font-size: 28px;
+  color: #76b093;
+  transition: transform 0.3s ease;
+}
+
+body.light-mode #toggle-btn i {
+  color: #444;
 }
 
 .main-logo {
@@ -25,6 +68,10 @@ header {
 
 nav {
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -35,6 +82,12 @@ nav a {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+nav a i {
+  margin-right: 8px;
+  color: #76b093;
 }
 
 nav a:hover {
@@ -63,9 +116,9 @@ nav a:hover {
   100% { transform: translateX(-100%); }
 }
 
-main, .home-news {
-  display: flex !important;
-  justify-content: center !important;
+main {
+  display: flex;
+  justify-content: center;
   gap: 30px;
   padding: 50px 20px;
   flex-wrap: wrap;
@@ -74,19 +127,12 @@ main, .home-news {
 .card {
   background: rgba(255, 255, 255, 0.07);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   padding: 30px;
   width: 350px;
   color: white;
-  transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: #76b093;
-  box-shadow: 0 0 20px rgba(118, 176, 147, 0.3);
+  transition: all 0.3s ease;
 }
 
 .card h3 {
@@ -101,37 +147,10 @@ footer {
   color: #666;
   font-size: 0.8rem;
 }
-#search {
-  padding: 8px;
-  border-radius: 5px;
-  margin-left: 10px;
-}
+
 @media (max-width: 750px) {
-  .main-logo {
-    font-size: 3rem !important;
-  }
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  nav a {
-    margin: 8px;
-    font-size: 1rem;
-  }
-  main {
-    flex-direction: column;
-    align-items: center;
-  }
-  .card {
-    width: 90%;
-  }
-}
-@media (max-width: 480px) {
-  .main-logo {
-    font-size: 2.5rem !important;
-  }
-  .breaking p {
-    font-size: 1rem;
-  }
+  .main-logo { font-size: 3rem !important; }
+  nav a { margin: 8px; }
+  main { flex-direction: column; align-items: center; }
+  .card { width: 90%; }
 }

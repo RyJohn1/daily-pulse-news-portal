@@ -1,5 +1,9 @@
 <html>
   <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <title>Daily Pulse | Category</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap"
@@ -9,20 +13,27 @@
   </head>
   <body>
     <header>
+      <button id="toggle-btn" onclick="toggle()">
+        <i id="theme-icon" class="fas fa-sun"></i>
+      </button>
+
       <h1 class="main-logo">Daily Pulse</h1>
+
       <nav>
-        <a href="index.html">Home</a>
-        <a href="sports.html">Sports</a>
-        <a href="politics.html">Politics</a>
-        <a href="technology.html">Technology</a>
-        <a href="entertainment.html">Entertainment</a>
-        <a href="login.html">Login</a>
+        <a href="index.html"><i class="fas fa-house"></i> Home</a>
+        <a href="sports.html"><i class="fas fa-volleyball"></i> Sports</a>
+        <a href="politics.html"><i class="fas fa-landmark"></i> Politics</a>
+        <a href="technology.html"><i class="fas fa-microchip"></i> Tech</a>
+        <a href="entertainment.html"
+          ><i class="fas fa-film"></i> Entertainment</a
+        >
+        <a href="login.html"><i class="fas fa-user"></i> Login</a>
       </nav>
     </header>
     <section class="breaking">
       <p>
-        Breaking News: Live updates for politics starting now!  Stay
-        informed with Daily Pulse 
+        Breaking News: Live updates for politics starting now! Stay informed
+        with Daily Pulse
       </p>
     </section>
     <main>
